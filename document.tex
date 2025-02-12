@@ -1,0 +1,50 @@
+
+\documentclass[12pt]{article}
+\usepackage[margin=0.5in]{geometry} % Small margins for more text per page
+\usepackage{fancyhdr}             % For custom headers/footers (page numbers)
+\usepackage{listings}             % For formatting code
+\usepackage{xcolor}               % For color in listings
+\usepackage{titling}              % For title formatting
+
+% Setup page numbering (fancyhdr prints page numbers by default)
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+
+% Configure listings style for Python code
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    showstringspaces=false
+}
+
+\title{Retrieval Augmented Generation for Biomedical Database with AI Language Model}
+\author{} % No author
+\date{}   % No date
+
+\begin{document}
+
+% Cover page with title and description; suppress page number here if desired
+\maketitle
+\thispagestyle{empty}
+
+\vspace{1cm}
+\begin{center}
+    \textbf{Description:} \\
+    This script combines three approaches for Retrieval Augmented Generation (RAG) using multiple AI models (MedCPT-based encoders, llama\_index with OpenAI embeddings, and direct LLM query via llama\_index).
+\end{center}
+
+\newpage
+\pagestyle{fancy}  % Reinstate page numbers after the cover page
+
+% Insert the code file using the listings package
+\lstinputlisting{rag-llm.py}
+
+\end{document}
